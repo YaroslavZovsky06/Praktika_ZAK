@@ -1,0 +1,2 @@
+# Praktika_ZAK
+Determinants
