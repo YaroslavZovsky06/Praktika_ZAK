@@ -1,25 +1,45 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
 #include <QMainWindow>
+#include <QComboBox>
+#include <QVBoxLayout>
+#include <QPushButton>
+#include <QFrame>
+#include <QHBoxLayout>
+#include <QGridLayout>
+#include <QStackedLayout>
+#include <QLineEdit>
+#include <QLabel>
+#include <QHBoxLayout>
+#include <QSignalMapper>
+#include <QDebug>
+#include <QStyle>
+#include <QDesktopWidget>
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
+namespace Ui {
+class MainWindow;
+}
 
-class MainWindow : public QMainWindow
-{
+class MainWindow : public QMainWindow {
     Q_OBJECT
-    int row1, row2;
-    int column1, column2;
-    int arr1[99][99];
-    int arr2[99][99];
-    int res[99][99];
 
-
-private slots:
-    void determThisM();
 public:
-    int determinant(int size);
+    explicit MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
+    MainWindow(QString title, int n);
+
+public slots:
+   void calculateDeterminant(QLabel *label);
+   void resizeDeterminantMatrix(QLineEdit* dim, QWidget *matrixFrame);
+   private:
+    Ui::MainWindow *ui;
+    QWidget *central;
+    QVector<QVector<QLineEdit*>> matrix;
+    QGridLayout *grid;
+
+    int n;
+
 };
+
 #endif // MAINWINDOW_H
+
