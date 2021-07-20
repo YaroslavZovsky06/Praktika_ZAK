@@ -84,7 +84,7 @@ MainWindow::MainWindow(QString title, int n){
     theoryFrame->setLayout(theoryLayout);
     theoryLayout->addWidget(theoryLine);
     theoryLine->setFixedSize(400,200);
-    theoryLine->setText("Тут должна быть теория");
+    theoryLine->setText("Задаём размер матрицы, вводим данные и находим определитель.");
 
     determinatLayout->addWidget(theoryFrame);
 
