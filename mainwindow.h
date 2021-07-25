@@ -1,8 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include <QMainWindow>
-#include <QComboBox>
-#include <QVBoxLayout>
 #include <QPushButton>
 #include <QFrame>
 #include <QHBoxLayout>
@@ -11,10 +9,6 @@
 #include <QLineEdit>
 #include <QLabel>
 #include <QHBoxLayout>
-#include <QSignalMapper>
-#include <QDebug>
-#include <QStyle>
-#include <QDesktopWidget>
 
 namespace Ui {
 class MainWindow;
@@ -42,4 +36,3 @@ public slots:
 };
 
 #endif // MAINWINDOW_H
-
